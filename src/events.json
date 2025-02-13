@@ -29,24 +29,24 @@
     "nbParticipants": 0,
     "like": false
   },
-  {
-    "id": 4,
-    "name": "Concert Live",
-    "description": "Une soirée de musique inoubliable.",
-    "img": "/images/event3.jpg",
-    "price": 20,
-    "nbTickets": 5,
-    "nbParticipants": 0,
-    "like": false
-  },
-  {
-    "id": 5,
-    "name": "Conférence Tech",
-    "description": "Événement sur les nouvelles technologies.",
-    "img": "/images/placeholder.jpg",
-    "price": 10,
-    "nbTickets": 2,
-    "nbParticipants": 0,
-    "like": false
+    {
+      "id": 4,
+      "name": "Concert Live",
+      "description": "Une soirée de musique inoubliable.",
+      "img": "/images/event3.jpg",
+      "price": 20,
+      "nbTickets": 5,
+      "nbParticipants": 0,
+      "like": false
+    },
+    {
+      "id": 5,
+      "name": "Conférence Tech",
+      "description": "Événement sur les nouvelles technologies.",
+      "img": "/images/placeholder.jpg",
+      "price": 10,
+      "nbTickets": 2,
+      "nbParticipants": 0,
+      "like": false
   }
 ]
