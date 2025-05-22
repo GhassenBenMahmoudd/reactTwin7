@@ -1,20 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Hello from './Components/Hello'
-import Form from './Components/Form'
-
-import Event from './Components/Event'
-import Events from './Components/Events'
-import Products from './Components/Products'
-
+import NavigationBar from './Components/NavigationBar';
+import Movies from './Components/Movies';
+import MovieDetails from './Components/MovieDetails';
+import Wishlist from './Components/Wishlist';
+import NotFound from './Components/NotFound';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { store } from './store';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+    <Provider store={store}>
+      <Router>
+        <NavigationBar />
+        <Routes>
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/movies/:id" element={<MovieDetails />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+    </Provider>
       {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -37,7 +45,7 @@ function App() {
       </p> */}
       {/* <Hello/>
       <h1>Atelier 0</h1>
-      
+
       <Form labelle="FirstName : " type="text" namee="FirstName" name="Firstname"/>
       <Form labelle="LastName : "/>
       <div className="App">
@@ -52,7 +60,7 @@ function App() {
      <div className="App">
       <ComponentTimer />
      </div>
-     
+
      <h1>Exercice 1</h1>
      <div className="App">
       <Counter />
@@ -84,14 +92,14 @@ function App() {
     </div> */}
 
 
-    <h1>Exercice Product</h1>
+    {/*<h1>Exercice Product</h1>
      <div className="App">
       <h1 className="text-center my-4">Product</h1>
       <Products/>
-    </div>
-     
-  
-      
+    </div>*/}
+
+
+
     </>
   )
 }
